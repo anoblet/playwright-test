@@ -15,5 +15,5 @@ test("index", async ({ page }) => {
     window.Intercom("shutdown");
   });
 
-  expect(await page.screenshot()).toMatchSnapshot("index.png");
+  expect(await page.screenshot({fullPage: true})).toMatchSnapshot("index.png");
 });
