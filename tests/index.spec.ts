@@ -5,5 +5,5 @@ test("index", async ({ page }) => {
     waitUntil: "networkidle",
   });
 
-  expect(await page.screenshot()).toMatchSnapshot("index.png");
+  expect(await page.locator('cxl-app-layout').screenshot()).toMatchSnapshot("index.png");
 });
