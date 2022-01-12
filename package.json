@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "update-snapshots": "playwright update-snapshots"
+    "update-snapshots": "playwright test --update-snapshots"
   },
   "keywords": [],
   "author": "",
