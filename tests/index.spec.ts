@@ -7,13 +7,13 @@ declare global {
 }
 
 test("index", async ({ page }) => {
-  await page.goto("https://conversionxli.warmpress.com/", {
-    waitUntil: "networkidle",
-  });
+  await page.goto("https://conversionxli.warmpress.com/");
 
   page.evaluate(() => {
     window.Intercom("shutdown");
   });
 
-  expect(await page.screenshot({fullPage: true})).toMatchSnapshot("index.png");
+  expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(
+    "index.png"
+  );
 });
